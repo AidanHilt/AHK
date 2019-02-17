@@ -48,7 +48,7 @@ Numpad3::
 	}
 
 	if(Mode="Shortcuts"){
-		KeyWait, Numpad3, T0.45
+		KeyWait, Numpad3, T 0.45
 		If(ErrorLevel){
 			Send, {Escape}
 			Sleep, 200

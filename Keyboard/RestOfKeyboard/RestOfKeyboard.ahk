@@ -55,3 +55,17 @@ End::
 		Send, {Home}
 	}
 	return
+
+'::
+	KeyWait, ', T 0.45
+	If(ErrorLevel){
+		Suspend
+		Send, {Raw}'''
+		Suspend
+		Sleep, 400
+	}Else{
+		Suspend
+		Send, {Raw}'
+		Suspend
+	}
+	return

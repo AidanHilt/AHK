@@ -50,33 +50,21 @@ return
 		Send, {Raw}return
 		return
 	}Else{
-		Send, {BackSpace}
 		Send, re
 	}
 return
 
 ;Shortcuts for Python
-::pr::
-	If(Mode="Python"){
-		Send, print(
-	}
+#If Mode="Python"
+::pr:: print(
 
 
 ;Shortcuts for AutoHotKey
-::r::
-	if(Mode="AHK"){
-		Send, Run,
-		return
-}
+#If Mode="AHK"
+	::r:: Run
 
-::we::
-	if(Mode="AHK"){
-		Send, WinExist(
-		return
-}
+#If Mode="AHK"
+::we:: WinExist(
 
-::wa::
-	if(Mode="AHK"){
-		Send, WinActive(
-		return
-	}
+#If Mode="AHK"
+::wa:: WinActive(
