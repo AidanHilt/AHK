@@ -56,6 +56,7 @@ End::
 	}
 	return
 
+#If WinActive("ahk_exe pycharm64.exe")
 '::
 	KeyWait, ', T 0.45
 	If(ErrorLevel){

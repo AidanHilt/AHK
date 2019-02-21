@@ -24,7 +24,7 @@ return
 
 Numpad1::
 	if(Mode="Standard"){
-		send 1
+		send Numpad1
 	}
 
 	if(Mode="Shortcuts"){
@@ -34,7 +34,7 @@ Numpad1::
 
 Numpad2::
 	if(Mode="Standard"){
-		send 2
+		send Numpad2
 	}
 
 	if(Mode="Shortcuts"){
@@ -44,7 +44,7 @@ Numpad2::
 
 Numpad3::
 	if(Mode="Standard"){
-		send 3
+		send Numpad3
 	}
 
 	if(Mode="Shortcuts"){
@@ -60,7 +60,7 @@ Numpad3::
 
 Numpad4::
 	if(Mode="Standard"){
-		send 4
+		send Numpad4
 	}
 
 	if(Mode="German"){
@@ -74,7 +74,7 @@ Numpad4::
 
 Numpad5::
 	if(Mode="Standard"){
-		send 5
+		send Numpad5
 	}
 
 	if(Mode="German"){
@@ -90,7 +90,7 @@ Numpad5::
 
 Numpad6::
 	if(Mode="Standard"){
-		send 6
+		send Numpad6
 	}
 
 	if(Mode="German"){
@@ -104,7 +104,7 @@ Numpad6::
 
 Numpad7::
 	if(Mode="Standard"){
-		send 7
+		send Numpad7
 	}
 
 	if(Mode="German"){
@@ -122,7 +122,7 @@ Numpad7::
 
 Numpad8::
 	if(Mode="Standard"){
-		Send 8
+		Send Numpad8
 	}
 
 	if(Mode="German"){
@@ -140,7 +140,7 @@ Numpad8::
 
 Numpad9::
 	if(Mode="Standard"){
-		send 9
+		send Numpad9
 	}
 
 	if(Mode="German"){
