@@ -21,32 +21,22 @@ return
 Mode:= "Shortcuts"
 return
 
-
+#If (Mode!="Standard")
 Numpad1::
-	if(Mode="Standard"){
-		send Numpad1
-	}
-
 	if(Mode="Shortcuts"){
 		WinMaximize, A
 	}
 	return
 
+#If (Mode!="Standard")
 Numpad2::
-	if(Mode="Standard"){
-		send Numpad2
-	}
-
 	if(Mode="Shortcuts"){
 		Send, #{Down}
 	}
 	return
 
+#If (Mode!="Standard")
 Numpad3::
-	if(Mode="Standard"){
-		send Numpad3
-	}
-
 	if(Mode="Shortcuts"){
 		KeyWait, Numpad3, T 0.45
 		If(ErrorLevel){
@@ -58,11 +48,8 @@ Numpad3::
 	}
 	return
 
+#If (Mode!="Standard")
 Numpad4::
-	if(Mode="Standard"){
-		send Numpad4
-	}
-
 	if(Mode="German"){
 		Send ä
 	}
@@ -72,11 +59,8 @@ Numpad4::
 	}
 	return
 
+#If (Mode!="Standard")
 Numpad5::
-	if(Mode="Standard"){
-		send Numpad5
-	}
-
 	if(Mode="German"){
 		Send ö
 	}
@@ -88,11 +72,8 @@ Numpad5::
 	}
 	return
 
+#If (Mode!="Standard")
 Numpad6::
-	if(Mode="Standard"){
-		send Numpad6
-	}
-
 	if(Mode="German"){
 		Send ü
 	}
@@ -102,11 +83,8 @@ Numpad6::
 	}
 	return
 
+#If (Mode!="Standard")
 Numpad7::
-	if(Mode="Standard"){
-		send Numpad7
-	}
-
 	if(Mode="German"){
 		Send Ä
 	}
@@ -120,11 +98,8 @@ Numpad7::
 	}
 	return
 
+#If (Mode!="Standard")
 Numpad8::
-	if(Mode="Standard"){
-		Send Numpad8
-	}
-
 	if(Mode="German"){
 		Send Ö
 	}
@@ -138,11 +113,8 @@ Numpad8::
 	}
 	return
 
+#If (Mode!="Standard")
 Numpad9::
-	if(Mode="Standard"){
-		send Numpad9
-	}
-
 	if(Mode="German"){
 		Send Ü
 	}
@@ -167,10 +139,8 @@ LastMinimizedWindow(){
     }
 }
 
+#If (Mode!="Standard")
 NumpadSub::
-	if(Mode="Standard"){
-		Send, -
-	}
 	if(Mode="Shortcuts"){
 		WinGet, LastMinimizedWindow, ID, A
 		LastMinimizedWindows.Push(LastMinimizedWindow)
@@ -178,10 +148,8 @@ NumpadSub::
 	}
 	return
 
+#If (Mode!="Standard")
 NumpadAdd::
-	if(Mode="Standard"){
-		Send, {Raw}+
-	}
 	if(Mode="Shortcuts"){
 		MaxWindow:=LastMinimizedWindows[LastMinimizedWindows.MaxIndex()]
 		WinRestore, ahk_id %MaxWindow%
