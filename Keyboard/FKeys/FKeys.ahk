@@ -4,7 +4,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 Active:=True
 
-!a::Active:=True
+!s::Active:=True
 
 !n::Active:=False
 
@@ -30,12 +30,20 @@ F2::
 
 #If Active
 F3::
-	Run, E:/Emby/system/EmbyServer.exe
+	if(WinActive("ahk_exe pycharm64.exe")){
+		Send, ^+-
+	}Else{
+		Run, E:/Emby/system/EmbyServer.exe
+	}
 	return
 
 #If Active
 F4::
-	Run, D:\Program Files (x86)\PyCharm Community Edition 2018.3.4\bin\pycharm64.exe
+	if(WinActive("ahk_exe pycharm64.exe")){
+		Send, ^+=
+	}Else{
+		Run, D:\Program Files (x86)\PyCharm Community Edition 2018.3.4\bin\pycharm64.exe
+	}
 	return
 
 #If Active

@@ -43,16 +43,18 @@ return
 	}
 return
 
-;Shortcuts for Java and Python and AHK
-::re::
-	If(Mode="Java" or Mode="Python" or Mode="AHK"){
+::au::
+	If(Mode="Default"){
 		Send, {BackSpace}
-		Send, {Raw}return
-		return
-	}Else{
-		Send, re
+		Send, {Raw}Anything up?
+		Send, {Enter}
 	}
 return
+
+;Shortcuts for Java and Python and AHK
+#If Mode="Java" or Mode="Python" or Mode="AHK"
+::re::
+	return
 
 ;Shortcuts for Python
 #If Mode="Python"

@@ -22,21 +22,21 @@ Mode:= "Shortcuts"
 return
 
 #If (Mode!="Standard")
-Numpad1::
+NumpadEnd::
 	if(Mode="Shortcuts"){
 		WinMaximize, A
 	}
 	return
 
 #If (Mode!="Standard")
-Numpad2::
+NumpadDown::
 	if(Mode="Shortcuts"){
 		Send, #{Down}
 	}
 	return
 
 #If (Mode!="Standard")
-Numpad3::
+NumpadPgdn::
 	if(Mode="Shortcuts"){
 		KeyWait, Numpad3, T 0.45
 		If(ErrorLevel){
@@ -49,7 +49,7 @@ Numpad3::
 	return
 
 #If (Mode!="Standard")
-Numpad4::
+NumpadLeft::
 	if(Mode="German"){
 		Send ä
 	}
@@ -60,20 +60,22 @@ Numpad4::
 	return
 
 #If (Mode!="Standard")
-Numpad5::
+NumpadClear::
 	if(Mode="German"){
 		Send ö
 	}
 
 	if(Mode="Shortcuts"){
+			SetNumLockState, On
 			Suspend
-			RunWait shortcut.py
+			RunWait shortcut.pyw
 			Suspend
+			SetNumLockState, Off
 	}
 	return
 
 #If (Mode!="Standard")
-Numpad6::
+NumpadRight::
 	if(Mode="German"){
 		Send ü
 	}
@@ -84,7 +86,7 @@ Numpad6::
 	return
 
 #If (Mode!="Standard")
-Numpad7::
+NumpadHome::
 	if(Mode="German"){
 		Send Ä
 	}
@@ -99,7 +101,7 @@ Numpad7::
 	return
 
 #If (Mode!="Standard")
-Numpad8::
+NumpadUp::
 	if(Mode="German"){
 		Send Ö
 	}
@@ -109,12 +111,12 @@ Numpad8::
 	}
 
 	if(Mode="Shortcuts"){
-		Send, #{Up}
+		WinActivate, 
 	}
 	return
 
 #If (Mode!="Standard")
-Numpad9::
+NumpadPgup::
 	if(Mode="German"){
 		Send Ü
 	}
@@ -124,7 +126,9 @@ Numpad9::
 	}
 
 	if(Mode="Shortcuts"){
-		Send, #{Tab}
+		WinActivate, ahk_exe steamwebhelper.exe, , Friends List,
+		WinMove, ahk_exe steamwebhelper.exe, , 1427, 409, 1125, 1062, , Friends List
+		MouseClick, , 252, 1012
 	}
 	return
 

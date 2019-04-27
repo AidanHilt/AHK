@@ -56,6 +56,16 @@ End::
 	}
 	return
 
+^1::
+	trueClipboard:=Clipboard
+	Send, ^c
+	Sleep, 300
+	RunWait, fixtext.pyw
+	Send, ^v
+	Sleep, 300
+	Clipboard:=trueClipboard
+	return
+
 #If WinActive("ahk_exe pycharm64.exe")
 '::
 	KeyWait, ', T 0.45
