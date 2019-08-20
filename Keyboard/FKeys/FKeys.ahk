@@ -8,6 +8,14 @@ Active:=True
 
 !n::Active:=False
 
+F12::
+	if Active{
+		Active:=False
+	}else{
+		Active:=True
+	}
+	return
+
 #If Active
 F1::
 	if(WinActive("ahk_exe pycharm64.exe")){
@@ -15,7 +23,14 @@ F1::
 		Send, ``
 		Send, {Alt up}
 	}Else{
-		Run, firefox.exe
+		trueClipboard:=Clipboard
+		Send, ^c
+		Sleep, 300
+		RunWait, "D:\Scripts\AHK\Keyboard\Helper Scripts\UpperAndLower.pyw"
+		Send, ^v
+		Sleep, 300
+		Clipboard:=trueClipboard
+		return
 	}
 	return
 
@@ -24,7 +39,14 @@ F2::
 	if(WinActive("ahk_exe pycharm64.exe")){
 		Send, !^L
 	}Else{
-		Run, C:/Program Files/Oracle/VirtualBox/VirtualBox.exe
+		trueClipboard:=Clipboard
+		Send, ^c
+		Sleep, 300
+		RunWait, "D:\Scripts\AHK\Keyboard\Helper Scripts\Woke.pyw"
+		Send, ^v
+		Sleep, 300
+		Clipboard:=trueClipboard
+		return
 	}
 	return
 
@@ -78,11 +100,6 @@ F10::
 
 #If Active
 F11::
-	
-	return
-
-#If Active
-F12::
 	
 	return
 

@@ -1,10 +1,7 @@
-import pyperclip 
-import sys
+import pyperclip
 
 finalStr = ''
 caps = False
-
-print(sys.argv)
 
 for char in pyperclip.paste():
 	if caps:

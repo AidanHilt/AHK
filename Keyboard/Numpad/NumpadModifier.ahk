@@ -143,7 +143,7 @@ LastMinimizedWindow(){
     }
 }
 
-#If (Mode!="Standard")
+#If (Mode!="Standard" and GetKeyState("NumLock", "T") = 0)
 NumpadSub::
 	if(Mode="Shortcuts"){
 		WinGet, LastMinimizedWindow, ID, A
@@ -152,7 +152,7 @@ NumpadSub::
 	}
 	return
 
-#If (Mode!="Standard")
+#If (Mode!="Standard" and GetKeyState("NumLock", "T") = 0) 
 NumpadAdd::
 	if(Mode="Shortcuts"){
 		MaxWindow:=LastMinimizedWindows[LastMinimizedWindows.MaxIndex()]
