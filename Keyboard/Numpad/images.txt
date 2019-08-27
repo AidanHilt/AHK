@@ -1,8 +1,0 @@
-Images/cmd.jpg
-Images/filex.png
-Images/ut.png
-Images/nflx.png
-Images/emby.png
-Images/kp.png
-Images/ub.png
-Images/lb.jpg

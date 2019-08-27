@@ -22,7 +22,7 @@ F1::
 	trueClipboard:=Clipboard
 	Send, ^c
 	Sleep, 300
-	RunWait, "D:\Scripts\AHK\Keyboard\Helper Scripts\UpperAndLower.pyw"
+	RunWait, "C:\AHK\Keyboard\Helper Scripts\UpperAndLower.pyw"
 	Send, ^v
 	Sleep, 300
 	Clipboard:=trueClipboard
@@ -32,7 +32,7 @@ F2::
 	trueClipboard:=Clipboard
 	Send, ^c
 	Sleep, 300
-	RunWait, "D:\Scripts\AHK\Keyboard\Helper Scripts\Woke.pyw"
+	RunWait, "C:\AHK\Keyboard\Helper Scripts\Woke.pyw"
 	Send, ^v
 	Sleep, 300
 	Clipboard:=trueClipboard
@@ -54,7 +54,7 @@ F5::
 F6::
 	if (WinActive("ahk_class CabinetWClass")){
 		Send +{F10}
-		Send {Down 3}
+		Send {Down 5}
 		Sleep, 50
 		Send {Enter}
 	}
@@ -62,7 +62,9 @@ F6::
 
 
 F7::
-	
+	WinActivate, ahk_exe steamwebhelper.exe, , Friends List,
+	WinMove, ahk_exe steamwebhelper.exe, , 599, 131, 775, 705, , Friends List
+	MouseClick, , 309, 647
 	return
 
 
