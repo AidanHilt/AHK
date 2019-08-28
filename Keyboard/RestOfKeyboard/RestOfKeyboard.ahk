@@ -66,6 +66,12 @@ End::
 	Clipboard:=trueClipboard
 	return
 
+PrintScreen::
+	Run, C:\WINDOWS\system32\SnippingTool.exe
+	Sleep, 500
+	WinActivate, ahk_exe SnippingTool.exe
+	WinMove, ahk_exe SnippingTool.exe, , 1427, 409
+
 #If WinActive("ahk_exe pycharm64.exe")
 '::
 	KeyWait, ', T 0.45
